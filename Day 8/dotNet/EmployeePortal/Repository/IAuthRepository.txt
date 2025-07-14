@@ -1,0 +1,13 @@
+using System.Threading.Tasks;
+using EmployeePortal.Models;  // Assuming your user model is here
+
+namespace EmployeePortal.Repository
+{
+    public interface IAuthRepository
+    {
+        Task<AppUser> Register(AppUser user, string password);
+        Task<AppUser?> Login(string username, string password);
+        Task<bool> UserExists(string username);
+        Task Login(string username, object password);
+    }
+}

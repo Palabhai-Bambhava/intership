@@ -1,0 +1,18 @@
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter } from '@angular/router';
+
+//import { routes } from './app.routes';
+import { provideHttpClient } from '@angular/common/http';
+import { EmployeeComponent } from './Components/employee/employee.component';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideHttpClient(),
+    provideRouter([
+      {
+        path: '',
+        component: EmployeeComponent  // ✅ Show EmployeeComponent at root
+      }
+    ])
+  ]
+};

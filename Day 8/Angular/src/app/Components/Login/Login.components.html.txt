@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <h2 class="mb-3">Login</h2>
+  <div class="mb-2">
+    <input type="text" [(ngModel)]="username" placeholder="Username" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <input type="password" [(ngModel)]="password" placeholder="Password" class="form-control" />
+  </div>
+  <button class="btn btn-primary w-100" (click)="onLogin()">Login</button>
+</div>
